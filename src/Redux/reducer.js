@@ -1,14 +1,14 @@
 
-const initialState = {
-	bookmarks: [],
+export const initialState = {
+    bookmarks: [],
 };
 
-const app = (state = initialState, action) => {
+export const app = (state, action) => {
 
-	switch(action.type) {
-	case '':
-		return {};
-	default:
-		break;
-	}
+    switch(action.type) {
+    case '':
+        return {};
+    default:
+        break;
+    }
 };
