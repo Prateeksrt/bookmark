@@ -1,5 +1,9 @@
 
-const app = (state, action) => {
+const initialState = {
+    bookmarks: [],
+};
+
+const app = (state = initialState, action) => {
 
     switch(action.type) {
         case "":
