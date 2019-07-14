@@ -35,21 +35,22 @@ const Item = (props) => (
         <td>{props.index}</td>
         <td>{props.item.label}</td>
         <td>{props.item.url}</td>
+        <Tags tags={props.item.tags}/>
     </tr>
 );
 
 const Tags = (props) => (
     <td>
         {props.tags.map((tag, index)=> (
-            <Badge variant={tag.type} key={`badge-${index}`}>
-                {tag.value}
+            <Badge variant="secondary" key={`badge-${index}`} className="mr-1">
+                {tag}
             </Badge>
         ))}
     </td>
 );
 
 Bookmark.propTypes = {
-    bookmarks: PropTypes.object,
+    bookmarks: PropTypes.array,
 };
 
 Content.propTypes = {
@@ -61,6 +62,6 @@ Tags.propTypes = {
 };
 
 Item.propTypes = {
-    index: PropTypes.string | PropTypes.number,
+    index: PropTypes.number,
     item: PropTypes.object,
 };
